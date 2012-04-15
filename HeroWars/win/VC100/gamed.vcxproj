@@ -95,20 +95,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\gamed\GameServer.cpp" />
+    <ClCompile Include="..\..\gamed\GameState.cpp" />
+    <ClCompile Include="..\..\gamed\InGameState.cpp" />
+    <ClCompile Include="..\..\gamed\LoadingState.cpp" />
     <ClCompile Include="..\..\gamed\Log.cpp" />
+    <ClCompile Include="..\..\gamed\MovingState.cpp" />
     <ClCompile Include="..\..\gamed\NetworkListener.cpp" />
     <ClCompile Include="..\..\gamed\Handlers.cpp" />
     <ClCompile Include="..\..\gamed\PacketHandler.cpp" />
     <ClCompile Include="..\..\gamed\Packets.cpp" />
     <ClCompile Include="..\..\gamed\main.cpp" />
+    <ClCompile Include="..\..\gamed\Party.cpp" />
+    <ClCompile Include="..\..\gamed\Player.cpp" />
+    <ClCompile Include="..\..\gamed\PlayerState.cpp" />
+    <ClCompile Include="..\..\gamed\State.cpp" />
+    <ClCompile Include="..\..\gamed\StateManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\gamed\ChatBox.h" />
+    <ClInclude Include="..\..\gamed\GameServer.h" />
+    <ClInclude Include="..\..\gamed\GameState.h" />
+    <ClInclude Include="..\..\gamed\InGameState.h" />
+    <ClInclude Include="..\..\gamed\LoadingState.h" />
+    <ClInclude Include="..\..\gamed\MovingState.h" />
     <ClInclude Include="..\..\gamed\NetworkListener.h" />
     <ClInclude Include="..\..\common.h" />
     <ClInclude Include="..\..\gamed\Log.h" />
     <ClInclude Include="..\..\gamed\PacketHandler.h" />
     <ClInclude Include="..\..\gamed\Packets.h" />
+    <ClInclude Include="..\..\gamed\Party.h" />
+    <ClInclude Include="..\..\gamed\Player.h" />
+    <ClInclude Include="..\..\gamed\PlayerState.h" />
+    <ClInclude Include="..\..\gamed\State.h" />
+    <ClInclude Include="..\..\gamed\StateManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="enet-1.2.5.vcxproj">
@@ -119,6 +139,9 @@
       <Project>{253d40b4-8b15-44d1-a718-c4035a31e5de}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HeroWars.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

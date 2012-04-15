@@ -16,11 +16,29 @@
     <Filter Include="Protocol">
       <UniqueIdentifier>{eeac7bfa-3b4f-4c49-987a-ab1bfa6da602}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{b30b86b2-802c-4b9d-a736-3216e71065dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States\GameStates">
+      <UniqueIdentifier>{c3a6550b-4ab5-4479-a4f8-7af3e629dee8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States\PlayerStates">
+      <UniqueIdentifier>{5c7f4217-5f7d-45f8-8b5f-220db603ee2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Party">
+      <UniqueIdentifier>{4bbf5bdd-ea02-4344-9ab6-5f4dbd7c6810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Party\Player">
+      <UniqueIdentifier>{eed8258a-29cf-46be-8cbd-a7670078ed13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameContent">
+      <UniqueIdentifier>{bb96b6d8-0624-4415-8270-608febaa836f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{15366fbf-3059-4bde-b975-7bd372916ec4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\gamed\Log.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\gamed\NetworkListener.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -34,16 +52,43 @@
       <Filter>Protocol</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gamed\main.cpp" />
+    <ClCompile Include="..\..\gamed\StateManager.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\State.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\GameState.cpp">
+      <Filter>States\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\LoadingState.cpp">
+      <Filter>States\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\InGameState.cpp">
+      <Filter>States\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\PlayerState.cpp">
+      <Filter>States\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\GameServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\MovingState.cpp">
+      <Filter>States\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\Party.cpp">
+      <Filter>Party</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\Player.cpp">
+      <Filter>Party\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\Log.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\gamed\NetworkListener.h">
       <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\common.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gamed\Log.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\gamed\PacketHandler.h">
       <Filter>Protocol</Filter>
@@ -51,8 +96,47 @@
     <ClInclude Include="..\..\gamed\Packets.h">
       <Filter>Protocol</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gamed\ChatBox.h">
+    <ClInclude Include="..\..\gamed\State.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\StateManager.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\GameState.h">
+      <Filter>States\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\LoadingState.h">
+      <Filter>States\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\InGameState.h">
+      <Filter>States\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\PlayerState.h">
+      <Filter>States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\GameServer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\gamed\MovingState.h">
+      <Filter>States\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\Party.h">
+      <Filter>Party</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\Player.h">
+      <Filter>Party\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\ChatBox.h">
+      <Filter>GameContent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\Log.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HeroWars.cd" />
   </ItemGroup>
 </Project>
