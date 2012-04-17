@@ -25,6 +25,7 @@ void LoadingState::release()
 {
 	GameState::release();
 	Log::getMainInstance()->writeLine("Leaving LoadingState\n");
+	_packetManager->unregisterIPacketHandler(this);
 }
 
 void LoadingState::update(float alphaTime)

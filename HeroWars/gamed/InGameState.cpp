@@ -22,6 +22,7 @@ void InGameState::release()
 {
 	GameState::release();
 	Log::getMainInstance()->writeLine("Leaving InGameState\n");
+	_packetManager->unregisterIPacketHandler(this);
 }
 
 void InGameState::update(float alphaTime)

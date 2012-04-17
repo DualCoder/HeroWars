@@ -16,6 +16,7 @@ public:
 	virtual void release();
 	virtual bool processPacket(HANDLE_ARGS);
 
+private:
 	//Packet Handlers
 	bool InGameState::handleMap(ENetPeer *peer, ENetPacket *packet);	
 	bool InGameState::handleInit(ENetPeer *peer, ENetPacket *packet);
