@@ -9,9 +9,7 @@ NetworkListener::NetworkListener()
 NetworkListener::~NetworkListener()
 {
 	_isAlive = false;
-
-	delete _handler;
-	delete _blowfish;
+			
 	enet_host_destroy(_server);
 }
 
@@ -28,17 +26,17 @@ bool NetworkListener::initialize(ENetAddress *address, const char *baseKey)
 	std::string key = base64_decode(baseKey);
 	if(key.length() <= 0)
 		return false;
-	_blowfish = new BlowFish((uint8*)key.c_str(), 16);
-	_handler = new PacketHandler(_server, _blowfish);
+	_blowfish = shared_ptr<BlowFish>(new BlowFish((uint8*)key.c_str(), 16));
+	_handler = shared_ptr<PacketManager>(new PacketManager(_server, _blowfish));
 	
 	return _isAlive = true;
 }
 
-void NetworkListener::netLoop()
+void NetworkListener::processPacket()
 {
 	ENetEvent event;
 
-	while(enet_host_service(_server, & event, 10) >= 0 && _isAlive)
+	while(enet_host_service(_server, & event, 10) > 0 && _isAlive) // > 0 we dispatch all received packets 
 	{
 		switch (event.type)
 		{
@@ -72,4 +70,9 @@ void NetworkListener::netLoop()
 		break;
 		}
 	}
+}
+
+shared_ptr<PacketManager> NetworkListener::getPacketManager()
+{
+	return _handler;
 }

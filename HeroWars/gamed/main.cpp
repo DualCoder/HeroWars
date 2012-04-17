@@ -31,7 +31,7 @@ int main(int argc, char ** argv)
 	address.host = SERVER_HOST;
 	address.port = SERVER_PORT;
 	GameServer gameServer("Server Test");
-	Log::getMainInstance()->writeLine("HeroWars %s",SERVER_VERSION);
+	Log::getMainInstance()->writeLine("HeroWars %s \n",SERVER_VERSION);
 	gameServer.Initialize(address,SERVER_KEY);
 	gameServer.start();
 	Log::getMainInstance()->writeLine("Goodbye\n");

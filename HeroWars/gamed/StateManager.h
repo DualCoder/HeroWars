@@ -2,7 +2,7 @@
 #define _STATE_MANAGER_H
 #include "State.h"
 
-#include <stack>
+#include <vector>
 #include <memory>
 using namespace std;
 
@@ -16,6 +16,6 @@ public:
 	void update(float alphaTime);	
 	bool isEmpty();
 private:
-	std::stack<shared_ptr<State>> _states;
+	std::vector<shared_ptr<State>> _states;
 };
 #endif

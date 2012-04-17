@@ -13,7 +13,7 @@ public:
 	virtual void initialize() = 0;
 	virtual void update(float alphaTime) = 0;
 	virtual void release() = 0;
-private:
+protected:
 	StateManager* _stateManager;
 };
 #endif

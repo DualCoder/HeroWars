@@ -9,5 +9,8 @@ class Player
 public:
 	Player();
 	~Player();
+	bool sendChatMessage(char* message); //send a chat message to this player
+
+	//!TODO champions , userID, team pointer , etc...
 };
 #endif

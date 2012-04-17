@@ -18,9 +18,8 @@ void GameServer::Initialize(ENetAddress& adress, const char* baseKey, unsigned i
 
 void GameServer::start()
 {
-	if(!_adress) return;
-	
-	Log::getMainInstance()->writeLine("Starting %s",_serverName);
+	if(!_adress) return;	
+	Log::getMainInstance()->writeLine("Starting %s \n",_serverName);
 
 	_listener = shared_ptr<NetworkListener>(new NetworkListener());
 	_listener->initialize(_adress,_baseKey);
@@ -28,11 +27,14 @@ void GameServer::start()
 	StateManager* stateManager = new StateManager();
 	shared_ptr<Party> currentParty(new Party());
 	_gameStateManager = shared_ptr<StateManager>(stateManager);
-	_gameStateManager->pushState(shared_ptr<LoadingState>(new LoadingState(stateManager,currentParty)));
+	_gameStateManager->pushState(shared_ptr<LoadingState>(new LoadingState(stateManager,currentParty,_listener->getPacketManager())));
+
+	_running = true;
 
 	unsigned int lastTime = GetTickCount();	
 	while(_running && !_gameStateManager->isEmpty())
 	{
+		_listener->processPacket();
 		unsigned int currentTime = GetTickCount();
 		float alphaTime = (lastTime - currentTime)/ _frameRate;
 		_gameStateManager->update(alphaTime);

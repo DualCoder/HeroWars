@@ -4,9 +4,10 @@
 #include <enet/enet.h>
 #include <intlib/base64.h>
 #include <intlib/blowfish.h>
+#include <memory>
 
 #include "common.h"
-#include "PacketHandler.h"
+#include "PacketManager.h"
 
 #define PEER_MTU 996
 class NetworkListener
@@ -16,13 +17,14 @@ class NetworkListener
 		~NetworkListener();
 
 		bool initialize(ENetAddress *address, const char *baseKey);
-		void netLoop();
+		void processPacket();
+		shared_ptr<PacketManager> getPacketManager();
 
 	private:
 		bool _isAlive;
-		PacketHandler *_handler;
-		ENetHost *_server;
-		BlowFish *_blowfish;
+		shared_ptr<PacketManager> _handler;
+		ENetHost* _server;
+		shared_ptr<BlowFish> _blowfish;
 };
 
 #endif

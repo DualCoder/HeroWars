@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
@@ -37,17 +33,12 @@
     <Filter Include="Tools">
       <UniqueIdentifier>{15366fbf-3059-4bde-b975-7bd372916ec4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Party\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\gamed\NetworkListener.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gamed\Handlers.cpp">
-      <Filter>Protocol</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gamed\PacketHandler.cpp">
-      <Filter>Protocol</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\gamed\Packets.cpp">
       <Filter>Protocol</Filter>
     </ClCompile>
@@ -71,7 +62,7 @@
       <Filter>States\PlayerStates</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gamed\GameServer.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Party\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gamed\MovingState.cpp">
       <Filter>States\PlayerStates</Filter>
@@ -85,14 +76,17 @@
     <ClCompile Include="..\..\gamed\Log.cpp">
       <Filter>Tools</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\gamed\PacketManager.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\Team.cpp">
+      <Filter>Party\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gamed\NetworkListener.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\gamed\NetworkListener.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gamed\PacketHandler.h">
-      <Filter>Protocol</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gamed\Packets.h">
       <Filter>Protocol</Filter>
     </ClInclude>
@@ -134,6 +128,18 @@
     </ClInclude>
     <ClInclude Include="..\..\common.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\IPacketHandler.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\PacketManager.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\Team.h">
+      <Filter>Party\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gamed\NetworkListener.h">
+      <Filter>Protocol</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
