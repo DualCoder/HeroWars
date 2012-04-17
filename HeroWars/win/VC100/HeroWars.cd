@@ -17,14 +17,14 @@
   <Class Name="LoadingState">
     <Position X="2.25" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAACAAAAAAEAABAAAAAAABAAAAAAAAAEAAA=</HashCode>
+      <HashCode>EAAACgAACgACAAAAgAEAgBAAAAAAAEAAAAAAgQAEAAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\LoadingState.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InGameState">
     <Position X="4.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAAAAACgAAAAAAAAFAkAAAAiAAAAQAAAAAAAAGAAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\InGameState.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -33,6 +33,41 @@
     <TypeIdentifier>
       <HashCode>AAAAABAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\PlayerState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameState" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAQAEAgAAAAAgAAAAAAAAAAAAFIAA=</HashCode>
+      <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\GameState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPacketHandler" Collapsed="true">
+    <Position X="42.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\IPacketHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkListener" Collapsed="true">
+    <Position X="44.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAQAECgBAIAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\NetworkListener.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacketManager" Collapsed="true">
+    <Position X="46.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAEAAACBAAAAAwAAIAAAAAAAAQAEAAAAAAABIEEA=</HashCode>
+      <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\PacketManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameServer" Collapsed="true">
+    <Position X="43.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgAgCAQBgAEAAAAAAGAAgAAAAAQAAAAAAAQA=</HashCode>
+      <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\GameServer.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

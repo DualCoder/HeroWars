@@ -33,7 +33,7 @@
     <Filter Include="Tools">
       <UniqueIdentifier>{15366fbf-3059-4bde-b975-7bd372916ec4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Party\Source Files">
+    <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
@@ -62,7 +62,7 @@
       <Filter>States\PlayerStates</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gamed\GameServer.cpp">
-      <Filter>Party\Source Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gamed\MovingState.cpp">
       <Filter>States\PlayerStates</Filter>
