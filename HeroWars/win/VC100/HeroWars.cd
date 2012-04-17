@@ -1,70 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="StateManager">
-    <Position X="9.25" Y="1.5" Width="1.5" />
+    <Position X="11" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAAAgAAAIAAAgEAAAAAAAAAAAAEQAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\StateManager.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="State">
-    <Position X="4.5" Y="1.5" Width="1.5" />
+    <Position X="3.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABJAEAAI=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\State.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LoadingState">
-    <Position X="2.25" Y="7" Width="1.5" />
+    <Position X="2.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAACgAACgACAAAAgAEAgBAAAAAAAEAAAAAAgQAEAAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\LoadingState.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="InGameState">
-    <Position X="4.5" Y="7" Width="1.5" />
+    <Position X="4.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAACgAAAAAAAAFAkAAAAiAAAAQAAAAAAAAGAAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\InGameState.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerState">
-    <Position X="6.75" Y="4.75" Width="1.5" />
+    <Position X="8" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\PlayerState.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameState" Collapsed="true">
-    <Position X="5.75" Y="9.5" Width="1.5" />
+  <Class Name="GameState">
+    <Position X="3.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAQAEAgAAAAAgAAAAAAAAAAAAFIAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\GameState.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="IPacketHandler" Collapsed="true">
-    <Position X="42.25" Y="10" Width="1.5" />
+  <Class Name="IPacketHandler">
+    <Position X="6.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\IPacketHandler.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NetworkListener" Collapsed="true">
-    <Position X="44.75" Y="10" Width="1.5" />
+  <Class Name="NetworkListener">
+    <Position X="14.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAAAQAECgBAIAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\NetworkListener.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PacketManager" Collapsed="true">
-    <Position X="46.5" Y="10" Width="1.5" />
+  <Class Name="PacketManager">
+    <Position X="16.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAEAAACBAAAAAwAAIAAAAAAAAQAEAAAAAAABIEEA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\PacketManager.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameServer" Collapsed="true">
-    <Position X="43.5" Y="5.5" Width="1.5" />
+  <Class Name="GameServer">
+    <Position X="12.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAgAgCAQBgAEAAAAAAGAAgAAAAAQAAAAAAAQA=</HashCode>
       <FileName>C:\Users\Jean\Documents\Visual Studio 2010\Projects\HeroWars\HeroWars\HeroWars\gamed\GameServer.h</FileName>
