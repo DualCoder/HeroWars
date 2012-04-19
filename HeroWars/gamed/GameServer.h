@@ -2,13 +2,13 @@
 #define _GAME_SERVER_H
 #include "NetworkListener.h"
 #include "StateManager.h"
-
+#include <string>
 #include <memory>
 
 class GameServer
 {
 public:
-	GameServer(const char* serverName) : _serverName(serverName), _running(false), _adress(NULL), _listener(NULL), _gameStateManager(NULL), _frameRate(60){ }
+	GameServer(std::string serverName) : _serverName(serverName), _running(false), _adress(NULL), _listener(NULL), _gameStateManager(NULL), _frameRate(60){ }
 	~GameServer();
 	void Initialize(ENetAddress& serverAdress, const char* baseKey, unsigned int frameRate = 60);
 	void start();
@@ -16,7 +16,7 @@ public:
 	bool isRunning() const;
 
 private:
-	const char* _serverName;
+	std::string _serverName;
 	const char* _baseKey;
 	bool _running;
 	ENetAddress* _adress;
