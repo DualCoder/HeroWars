@@ -55,7 +55,7 @@ typedef struct _SynchVersionAns
 		cmd = PKT_S2C_SynchVersion;
 		unk1 = 0;
 		ok = ok2 = 1;
-		memcpy(version, "Version 1.0.0.136 [PUBLIC]", 27);
+		memcpy(version, "Version 1.0.0.141 [PUBLIC]", 27);
 		memcpy(gameMode, "CLASSIC", 8);
 		memset(zero, 0, 2232);
 		end1 = 0xE2E0;

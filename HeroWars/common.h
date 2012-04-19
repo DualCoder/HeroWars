@@ -16,16 +16,16 @@ typedef unsigned long long uint64;
 enum PacketCmd : uint8
 {
 	PKT_KeyCheck = 0x00,
-	PKT_S2C_QueryStatusAns = 0x8e,
-	PKT_World_SendGameNumber = 0x99,
+	PKT_S2C_QueryStatusAns = 0x90,
+	PKT_World_SendGameNumber = 0x9B,
 	PKT_C2S_QueryStatusReq = 0x17,
-	PKT_C2S_SynchVersion = 0xc6,
-	PKT_C2S_CharLoaded = 0xc7,
+	PKT_C2S_SynchVersion = 0xC8,
+	PKT_C2S_CharLoaded = 0xc9,
 	PKT_C2S_Exit = 0x95,
 	PKT_C2S_ClientReady = 0x64,  //ready >>for loading<<!!!
-	PKT_C2S_GameNumberReq = 0xA5,
+	PKT_C2S_GameNumberReq = 0xA7,
 	PKT_C2S_Ping_Load_Info = 0x19,
-	PKT_S2C_Ping_Load_Info = 0x9E,
+	PKT_S2C_Ping_Load_Info = 0xA0,
 	PKT_C2S_Loaded = 0x56,
 	PKT_C2S_ViewReq = 0x30,
 	PKT_S2C_ViewAns = 0x2E,
@@ -40,7 +40,7 @@ enum PacketCmd : uint8
 	PKT_S2C_SkillUp = 0x18,
 	PKT_C2S_OpenShop = 0x61,
 	PKT_C2S_MoveReq = 0x76,
-	PKT_S2C_SynchVersion = 0x58,
+	PKT_S2C_SynchVersion = 0x5A,
 
 	PKT_S2C_LoadScreenInfo = 0x67,
 	PKT_S2C_LoadName = 0x66,
