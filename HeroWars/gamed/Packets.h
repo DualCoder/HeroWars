@@ -225,25 +225,6 @@ typedef struct _ViewReq
 	uint8 requestNo;
 } ViewReq;
 
-typedef struct _MoveReq
-{
-	uint8 cmd;
-	uint8 sub_cmd1;
-	uint16 sub_cmd1Pad; //padding
-	uint16 sub_cmd1Def; // defintion of cmd
-	float x1; //position where is clicked on
-	float y1; //-||-
-	float z1; //-||-
-	uint32 pad2; //padding
-	uint32 unk1; //Unk
-	uint8 sub_cmd2;
-	uint16 sub_cmd2Pad; //padding
-	uint16 sub_cmd2Def; // definition of cmd
-	short x2; // I don't get that shit
-	short y2; // -||-
-	short z2; // -||-
-} MoveReq;
-
 typedef struct _ViewAns
 {
 	_ViewAns()
@@ -256,6 +237,45 @@ typedef struct _ViewAns
 	uint32 unk1;
 	uint8 requestNo;
 } ViewAns;
+
+typedef struct _MoveReq
+{
+	uint8 cmd;
+	uint8 sub_cmd1;
+	uint16 sub_cmd1Pad; //padding
+	uint16 sub_cmd1Def; // defintion of cmd
+	float x; //position where is clicked on
+	float y; //-||-
+	float z; //-||-
+	//here comes the vector
+} MoveReq;
+
+/*typedef struct _MoveReqAns
+{
+	_MoveReqAns(MoveReq *req)
+	{
+		cmd = PKT_S2C_MoveReq;
+		rest_of_cmd = 0;
+		unk1 = 0x0A8F;
+		unk2 = 0;
+		unk3 = 0x0001;
+		unk4 = 0xB8F50200;
+		subcmd = 0x19;
+		pad = 0;
+		*vector = *req->vector;
+		
+	}
+	uint8 cmd;
+	uint32 rest_of_cmd;
+	uint16 unk1;
+	uint16 unk2;
+	uint16 unk3;
+	uint32 unk4;
+	uint8 subcmd;
+	uint16 pad;
+	uint8 *vector;
+	//uint8 *vector; // same :D
+} MoveReqAns; */
 
 typedef struct _FogUpdate
 {
@@ -331,8 +351,8 @@ typedef struct _HeroSpawn
 		unk1 = 0;
 		memset(&name, 0, 128+40); //Set name + type to zero
 
-		x = 130880;
-		y = 502;
+		x = 0;
+		y = 0;
 	}
 
 	PacketHeader header;

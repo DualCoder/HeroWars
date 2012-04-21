@@ -125,8 +125,10 @@ bool InGameState::handleView(ENetPeer *peer, ENetPacket *packet)
 bool InGameState::handleMove(ENetPeer *peer, ENetPacket *packet)
 {
 	MoveReq *request = reinterpret_cast<MoveReq*>(packet->data);
+	//MoveReqAns response(request);
+	Log::getMainInstance()->writeLine("Move to: x(left->right):%f, y(height):%f, z(bot->top): %f\n", request->x, request->y, request->z);
 
-	Log::getMainInstance()->writeLine("Move to: x(left->right):%f, y(height):%f, z(bot->top): %f\n", request->x1, request->y1, request->z1);
+	//return _packetManager->broadcastPacket(reinterpret_cast<uint8*>(&response), sizeof(MoveReqAns), 3, UNRELIABLE);
 	return true;
 }
 

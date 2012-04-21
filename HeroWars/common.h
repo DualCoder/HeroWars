@@ -38,6 +38,7 @@ enum PacketCmd : uint8
 	PKT_S2C_LoadName                = 0x66,
 	PKT_S2C_LoadScreenInfo          = 0x67,
 	PKT_C2S_MoveReq                 = 0x78,
+	PKT_S2C_MoveReq					= 0x65,
 	PKT_S2C_FogUpdate               = 0x7A,
 	PKT_C2S_ReqBuyItem              = 0x88,
 	PKT_S2C_QueryStatusAns          = 0x90,
@@ -48,6 +49,7 @@ enum PacketCmd : uint8
 	PKT_C2S_Click                   = 0xBA,
 	PKT_C2S_SynchVersion            = 0xC8,
 	PKT_C2S_CharLoaded              = 0xC9,
+	PKT_C2S_Spell					= 0xA5,
 	PKT_Batch                       = 0xFF,
 	//It has a 3 byte pre header and then just concated the packets, where it is FF COUNT UNK (all bytes)
 	//But beware!! The packet headers of the packets in the batch are shortened by 2 bytes!!!!

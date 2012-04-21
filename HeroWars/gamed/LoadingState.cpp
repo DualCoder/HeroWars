@@ -166,7 +166,8 @@ bool LoadingState::handleLoadPing(ENetPeer *peer, ENetPacket *packet)
 	Log::getMainInstance()->writeLine("Loading: loaded: %f, ping: %f, %i, %f\n", loadInfo->loaded, loadInfo->ping, loadInfo->unk4, loadInfo->f3);
 	if(100.0f - (loadInfo->loaded) < FLT_EPSILON)
 	{
-		//!TODO here we should check that everyone is logged
+		//!TODO here we should check that everyone is logged, using something like:
+		//100 * sizeof(players) - sum(loadInfo->loaded) * players < FLT_EPSILON
 		_loadingFinished = true;
 	}
 	return _packetManager->broadcastPacket(reinterpret_cast<uint8*>(&response), sizeof(PingLoadInfo), 4, UNRELIABLE);
@@ -194,5 +195,5 @@ bool LoadingState::handleSpawn(ENetPeer *peer, ENetPacket *packet)
 
 	_packetManager->sendPacket(peer, reinterpret_cast<uint8*>(&spawn), sizeof(HeroSpawn), CHL_S2C);
 	_packetManager->sendPacket(peer, reinterpret_cast<uint8*>(&end), sizeof(StatePacket), CHL_S2C);
-	return true;
+  	return true;
 }
