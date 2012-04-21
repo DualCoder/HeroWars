@@ -85,7 +85,7 @@
     <ClCompile Include="..\..\gamed\NetworkListener.cpp">
       <Filter>Protocol</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
+    <ClCompile Include="..\..\gamed\Entity.cpp">
       <Filter>GameContent</Filter>
     </ClCompile>
   </ItemGroup>
@@ -144,7 +144,7 @@
     <ClInclude Include="..\..\gamed\NetworkListener.h">
       <Filter>Protocol</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
+    <ClInclude Include="..\..\gamed\Entity.h">
       <Filter>GameContent</Filter>
     </ClInclude>
   </ItemGroup>

@@ -111,7 +111,7 @@
     <ClCompile Include="..\..\gamed\State.cpp" />
     <ClCompile Include="..\..\gamed\StateManager.cpp" />
     <ClCompile Include="..\..\gamed\Team.cpp" />
-    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="..\..\gamed\Entity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\gamed\ChatBox.h" />
@@ -132,7 +132,7 @@
     <ClInclude Include="..\..\gamed\State.h" />
     <ClInclude Include="..\..\gamed\StateManager.h" />
     <ClInclude Include="..\..\gamed\Team.h" />
-    <ClInclude Include="Entity.h" />
+    <ClInclude Include="..\..\gamed\Entity.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="enet-1.2.5.vcxproj">
