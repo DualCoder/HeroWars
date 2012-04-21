@@ -90,7 +90,7 @@ bool PacketManager::handlePacket(ENetPeer *peer, ENetPacket *packet, uint8 chann
 
 	bool handled = false;
 
-	for(int i = 0; i < _packetHandlers.size(); i++)
+	for(uint32 i = 0; i < _packetHandlers.size(); i++)
 	{
 		handled = handled || _packetHandlers[i]->processPacket(peer,packet,channelID);
 	}

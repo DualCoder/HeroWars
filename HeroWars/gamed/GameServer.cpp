@@ -36,7 +36,7 @@ void GameServer::start()
 	{
 		_listener->processPacket();
 		unsigned int currentTime = GetTickCount();
-		float alphaTime = (lastTime - currentTime)/ _frameRate;
+		float alphaTime = (lastTime - (float)currentTime)/ _frameRate;
 		_gameStateManager->update(alphaTime);
 		lastTime = currentTime;
 	}
