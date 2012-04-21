@@ -19,7 +19,7 @@ void GameServer::Initialize(ENetAddress& adress, const char* baseKey, unsigned i
 void GameServer::start()
 {
 	if(!_adress) return;	
-	Log::getMainInstance()->writeLine("Starting %s \n",_serverName);
+	Log::getMainInstance()->writeLine("Starting %s \n",_serverName.c_str());
 
 	_listener = shared_ptr<NetworkListener>(new NetworkListener());
 	_listener->initialize(_adress,_baseKey);
