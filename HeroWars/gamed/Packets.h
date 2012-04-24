@@ -80,7 +80,6 @@ typedef struct _SynchVersionAns
 typedef struct _PingLoadInfo
 {
 	PacketHeader header;
-	uint8 unk0;
 	uint32 unk1;
 	uint64 userId;
 	float loaded;
