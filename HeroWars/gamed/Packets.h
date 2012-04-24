@@ -57,11 +57,11 @@ typedef struct _SynchVersionAns
 	{
 		header.cmd = PKT_S2C_SynchVersion;
 		ok = ok2 = 1;
-		memcpy(version, "Version 1.0.0.141 [PUBLIC]", 27);
+		memcpy(version, "Version 1.0.0.138 [PUBLIC]", 27);
 		memcpy(gameMode, "CLASSIC", 8);
 		memset(zero, 0, 2232);
 		end1 = 0xE2E0;
-		end2 = 0xA0;
+		end2 = 0x4A;
 	}
 
 	PacketHeader header;
@@ -367,20 +367,27 @@ typedef struct _HeroSpawn
 
 typedef struct _SkillUpPacket
 {
-	PacketHeader header;
-	uint8 skill;
+	PacketCmd cmd;
+	uint8 subCmd; //0x19 ?
+	uint16 pad; //Some Padding
+	uint16 skill;
 } SkillUpPacket;
 
 typedef struct _SkillUpResponse
 {
 	_SkillUpResponse()
 	{
-		header.cmd = PKT_S2C_SkillUp;
+		cmd = PKT_S2C_SkillUp;
+		subCmd = 0x19;
+		pad = 0x00;
+		skill = 0x00;
 		level = 0x0000;
 	}
-	PacketHeader header;
-	uint8 skill;
-	uint16 level; //?
+	PacketCmd cmd;
+	uint8 subCmd; 
+	uint16 pad; //Some Padding
+	uint16 skill;
+	uint16 level; 
 	
 	
 } SkillUpResponse;
