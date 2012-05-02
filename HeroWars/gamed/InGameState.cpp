@@ -160,6 +160,8 @@ bool InGameState::handleSkillUp(ENetPeer *peer, ENetPacket *packet) {
 	
 	skillUpResponse.skill = skillUpPacket->skill;
 	skillUpResponse.level = 0x0001;
+		uint8 cmd1[] = {0xc5, 0x19, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02};
+		_packetManager->sendPacket(peer, reinterpret_cast<uint8*>(&cmd1), sizeof(cmd1), 3, UNRELIABLE);
 
 	return _packetManager->sendPacket(peer, reinterpret_cast<uint8*>(&skillUpResponse),sizeof(skillUpResponse),CHL_GAMEPLAY);
 

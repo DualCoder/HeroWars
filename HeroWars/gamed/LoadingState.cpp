@@ -188,6 +188,8 @@ bool LoadingState::handleSpawn(ENetPeer *peer, ENetPacket *packet)
 	HeroSpawn spawn;
 	spawn.netId = 0x40000019; 
 	spawn.gameId = 0;
+	spawn.x = 0;
+	spawn.y = 0;
 	memcpy(spawn.name, peerInfo(peer)->name, peerInfo(peer)->nameLen);
 	memcpy(spawn.type, peerInfo(peer)->type, peerInfo(peer)->typeLen);
 
@@ -195,5 +197,6 @@ bool LoadingState::handleSpawn(ENetPeer *peer, ENetPacket *packet)
 
 	_packetManager->sendPacket(peer, reinterpret_cast<uint8*>(&spawn), sizeof(HeroSpawn), CHL_S2C);
 	_packetManager->sendPacket(peer, reinterpret_cast<uint8*>(&end), sizeof(StatePacket), CHL_S2C);
-  	return true;
+
+	return true;
 }
