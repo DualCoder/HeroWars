@@ -239,10 +239,7 @@ typedef struct _ViewAns
 
 typedef struct _MoveReq
 {
-	uint8 cmd;
-	uint8 sub_cmd1;
-	uint16 sub_cmd1Pad; //padding
-	uint16 sub_cmd1Def; // defintion of cmd
+	PacketHeader header;
 	float x; //position where is clicked on
 	float y; //-||-
 	float z; //-||-
