@@ -8,7 +8,7 @@ Members
 
 Important rules
 ---------
-* Use this style reference for all your code: http://geosoft.no/development/cppstyle.html
+* Use this style reference for all your code: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
 * If you fix bugs or find info, share them back (GPLv3)
 
 About
