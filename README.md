@@ -9,11 +9,11 @@ Members
 Important rules
 ---------
 * Use this style reference for all your code: http://geosoft.no/development/cppstyle.html
-* If you fix bugges and find info, share them back (GPLv3)
+* If you fix bugs or find info, share them back (GPLv3)
 
 About
 ------
-It try's to copy a real League of Legends server, we carefully crafted everything by just using packet streams.
+Our end goal is to create a working server for League of Legends; we carefully crafted the server to work by using packet streams only.
 
 Contributing
 ------------
