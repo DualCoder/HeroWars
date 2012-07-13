@@ -167,8 +167,9 @@ typedef struct _KeyCheck
 
 	uint8 cmd;
 	uint8 partialKey[3];   //Bytes 1 to 3 from the blowfish key for that client
-	uint32 netId;
+	uint32 netId;		   //not used
 	uint64 userId;         //uint8 testVar[8];   //User id + padding
+	uint32 padding;
 	uint64 checkId;        //uint8 checkVar[8];  //Encrypted testVar
 } KeyCheck;
 

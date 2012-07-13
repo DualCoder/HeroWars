@@ -47,9 +47,9 @@ enum PacketCmd : uint8
 	PKT_S2C_Ping_Load_Info          = 0x9F,
 	PKT_C2S_GameNumberReq           = 0xA6,
 	PKT_C2S_Click                   = 0xAF,
-	PKT_C2S_SynchVersion            = 0xC7,
-	PKT_C2S_CharLoaded              = 0xC8,
-	PKT_C2S_Spell					= 0xA4,
+	PKT_C2S_SynchVersion            = 0xC9,
+	PKT_C2S_CharLoaded              = 0xCA,
+	PKT_C2S_Spell					= 0xA4,  // perhaps +2/+3
 
 
 	PKT_Batch                       = 0xFF,
