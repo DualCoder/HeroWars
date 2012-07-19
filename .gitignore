@@ -14,6 +14,9 @@
 *.ilk
 *.aps
 
+#config files
+*.cfg
+
 # Packages
 # it's better to unpack these files and commit the raw source
 # git has its own built in compression methods
@@ -60,6 +63,9 @@ ipch
 
 # Subversion data folders
 .svn/
+
+#resharper
+*_resharper*
 
 # CMake temporary files
 CMakeFiles
