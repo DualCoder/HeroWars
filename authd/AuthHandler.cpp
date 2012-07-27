@@ -27,6 +27,9 @@ author: C0dR
 AuthHandler::AuthHandler(Ptr<IDatabase> database)
 {
 	_database = database;
+
+	/* initialize random seed: */
+	srand ( (unsigned int)time(NULL) );
 }
 bool AuthHandler::authentificate(char* username, char* password,uint32 &sessionKey)
 {
@@ -51,7 +54,7 @@ bool AuthHandler::authentificate(char* username, char* password,uint32 &sessionK
 	time_t rawtime;
 	time ( &rawtime );
 	char* time = ctime(&rawtime);
-	sprintf(buffer,"%s%s%s",username,password,time);
+	sprintf(buffer,"%s%s%s%i",username,password,time,rand() % 1337 + 1);
 	
 	uint32 key = hash(buffer);
 	sessionKey = key;
@@ -61,7 +64,7 @@ bool AuthHandler::authentificate(char* username, char* password,uint32 &sessionK
 
 bool AuthHandler::userConnected(uint32 sessionHash)
 {
-	for(int i=0;i<_users.size();i++)
+	for(uint32 i=0;i<_users.size();i++)
 	{
 		if(_users[i]->sessionHash == sessionHash)
 			return true;
@@ -71,7 +74,7 @@ bool AuthHandler::userConnected(uint32 sessionHash)
 
 bool AuthHandler::getUser(uint32 sessionHash, User** user)
 {
-	for(int i=0;i<_users.size();i++)
+	for(uint32 i=0;i<_users.size();i++)
 	{
 		if(_users[i]->sessionHash == sessionHash)
 		{
@@ -84,7 +87,7 @@ bool AuthHandler::getUser(uint32 sessionHash, User** user)
 
 void AuthHandler::removeUser(uint32 sessionHash)
 {
-	for(int i=0;i<_users.size();i++)
+	for(uint32 i=0;i<_users.size();i++)
 	{
 		if(_users[i]->sessionHash == sessionHash)
 		{

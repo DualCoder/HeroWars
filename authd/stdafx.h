@@ -22,6 +22,15 @@ author: C0dR
 #ifndef _MAIN_H
 #define _MAIN_H
 
+//Disable deprecation
+#define _CRT_SECURE_NO_DEPRECATE 
+#define _SCL_SECURE_NO_DEPRECATE
+#define _CRT_SECURE_NO_WARNINGS
+
+#define Ptr shared_ptr
+#define newPtr make_shared
+#define Logging Log::getInstance()
+
 #include <memory>
 #include <string>
 #include <algorithm>
@@ -38,12 +47,6 @@ author: C0dR
 #include "functions.h"
 
 using namespace std;
-
-
-#define Ptr shared_ptr
-#define newPtr make_shared
-#define Logging Log::getInstance()
-
 
 #define SERVER_VERSION "0.0.1"
 

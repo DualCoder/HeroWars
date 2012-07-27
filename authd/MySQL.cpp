@@ -107,7 +107,7 @@ bool MySQL::FetchArray(void* queryResult, map<string,string>* result)
 		
 		char buffer[1024];
 		sql::ResultSetMetaData* metaData = resultSet->getMetaData();
-		for(int i=0;i<metaData->getColumnCount();i++)
+		for(uint32 i=0;i<metaData->getColumnCount();i++)
 		{
 			columnName = metaData->getColumnName(i+1);
 			switch(metaData->getColumnType(i+1))
@@ -123,7 +123,7 @@ bool MySQL::FetchArray(void* queryResult, map<string,string>* result)
 			case sql::DataType::BIGINT:
 			case sql::DataType::SMALLINT:
 			case sql::DataType::NUMERIC:
-				itoa(resultSet->getInt(i+1),buffer,10);
+				_itoa(resultSet->getInt(i+1),buffer,10);
 				columnValue = buffer;
 				break;
 			case sql::DataType::DECIMAL:

@@ -77,8 +77,6 @@ TCPServer::~TCPServer()
 }
 bool TCPServer::initialize(string port)
 {
-	hostent* localHost;
-	char* localIP;
 	sockaddr_in addr;
 	WSADATA wsaData;
 
