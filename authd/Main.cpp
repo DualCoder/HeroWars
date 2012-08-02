@@ -20,11 +20,16 @@ author: C0dR
 
 */
 #include "stdafx.h"
-#include "TCPServer.h"
+//#include "ISocket.h"
+#if _WIN32 || _WIN64
+	#include "WinSocket.h"
+#else 
+	#include "LinuxSocket.h"
+#endif
 #include "Settings.h"
 #include "Log.h"
 
-Ptr<TCPServer> _server;
+Ptr<ISocket> _server;
 
 bool initialize()
 {
@@ -43,7 +48,11 @@ bool initialize()
 	else if(dbtype == "postgre" || dbtype == "postgresql")
 		type = DT_POSTGRESQL;
 
-	_server = newPtr<TCPServer>(type);
+#if _WIN32
+	_server = newPtr<WinSocket>(type);
+#else
+	_server = newPtr<LinuxSocket>(type);
+#endif
 	return _server->initialize(port);
 }
 

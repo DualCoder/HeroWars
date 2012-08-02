@@ -20,29 +20,29 @@ author: C0dR
 
 */
 
+#ifndef _TCPSERVER_H
+#define _TCPSERVER_H
 
+#include "ISocket.h"
 
-#ifndef _PACKETHANDLER_H
-#define _PACKETHANDLER_H
-
-#include "AuthHandler.h"
-#include "Packets.h"
-
-//dummy class
-class ISocket;
-
-class PacketHandler
+class LinuxSocket : public ISocket
 {
 public:
-	PacketHandler(ISocket *tcpServer);
-	bool HandlePacket(Client* client, char* packet);
-	void removeUser(uint32 sessionHash);
+	LinuxSocket(DatabaseType dbType);
+	~LinuxSocket();
+	bool initialize(string port);
+	void run();
+	bool SendPacket(SOCKET client, uint8* data, int length);
+	bool SendFile(SOCKET client, char* fileName);
+	void shutdown();
+	Ptr<IDatabase> getDatabase();
+	Ptr<PacketHandler> getPacketHandler();
+
 private:
-	bool handleHandshake(Client* client, char* packet);
-	bool handleAuth(Client* client, char* packet);
-	bool handleDisconnect(Client* client, char* packet);
-	ISocket *_tcpServer;
-	Ptr<AuthHandler> _authHandler;
+	int initSocket, connSocket;
+	Ptr<IDatabase> _database;
+	Ptr<PacketHandler> _packetHandler;
 };
 
-#endif  //_PACKETHANDLER_H
+
+#endif  //_TCPSERVER_H

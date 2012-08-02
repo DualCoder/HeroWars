@@ -21,7 +21,7 @@ author: C0dR
 */
 #include "stdafx.h"
 #include "PacketHandler.h"
-#include "TCPServer.h"
+#include "ISocket.h"
 #include "Log.h"
 #include "Crypt.h"
 
@@ -35,7 +35,7 @@ void stringtolower(char* input)
 	}
 }
 
-PacketHandler::PacketHandler(TCPServer* tcpServer)
+PacketHandler::PacketHandler(ISocket* tcpServer)
 {
 	_tcpServer = tcpServer;
 	_authHandler = newPtr<AuthHandler>(_tcpServer->getDatabase());

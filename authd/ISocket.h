@@ -20,49 +20,44 @@ author: C0dR
 
 */
 
+#ifndef _ISOCKET_H
+#define _ISOCKET_H
 
-
-#ifndef _TCPSERVER_H
-#define _TCPSERVER_H
-
-#include "IDatabase.h"
 #include "PacketHandler.h"
 #include "MySQL.h"
 #include "PostgreSQL.h"
+#include "Log.h"
+
 #if _WIN32
 #include <Windows.h>
 #else
 #include <pthread.h>
 #endif
 
-class TCPServer
+class ISocket
 {
 public:
-	TCPServer(DatabaseType dbType);
-	~TCPServer();
-	bool initialize(string port);
-	void run();
-	bool SendPacket(SOCKET client, uint8* data, int length);
-	bool SendFile(SOCKET client, char* fileName);
-	void shutdown();
-	Ptr<IDatabase> getDatabase();
-
-	Ptr<PacketHandler> _packetHandler;
-private:
-	SOCKET _server;
-	Ptr<IDatabase> _database;
+	virtual bool initialize(string port) = 0;
+	virtual void run() = 0;
+	virtual bool SendPacket(SOCKET client, uint8* data, int length) = 0;
+	virtual bool SendFile(SOCKET client, char* fileName) = 0;
+	virtual void shutdown() = 0;
+	virtual Ptr<IDatabase> getDatabase() = 0;
+	virtual Ptr<PacketHandler> getPacketHandler() = 0;
 };
 
 typedef struct _threadData
 {
-	_threadData(Client pClient, TCPServer* pServer)
+	_threadData(Client pClient, ISocket* pServer)
 	{
 		client = pClient;
 		server = pServer;
 	}
 	Client client;
-	TCPServer* server;
+	ISocket* server;
 }ThreadData;
 
 
-#endif  //_TCPSERVER_H
+
+
+#endif

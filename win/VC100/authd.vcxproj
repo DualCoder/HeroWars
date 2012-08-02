@@ -88,12 +88,13 @@
     <ClCompile Include="..\..\authd\Packets.cpp" />
     <ClCompile Include="..\..\authd\PostgreSQL.cpp" />
     <ClCompile Include="..\..\authd\Settings.cpp" />
-    <ClCompile Include="..\..\authd\TCPServer.cpp" />
+    <ClCompile Include="..\..\authd\WinSocket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\authd\AuthHandler.h" />
     <ClInclude Include="..\..\authd\Crypt.h" />
     <ClInclude Include="..\..\authd\IDatabase.h" />
+    <ClInclude Include="..\..\authd\ISocket.h" />
     <ClInclude Include="..\..\authd\Log.h" />
     <ClInclude Include="..\..\authd\Packets.h" />
     <ClInclude Include="..\..\authd\stdafx.h" />
@@ -101,8 +102,8 @@
     <ClInclude Include="..\..\authd\PacketHandler.h" />
     <ClInclude Include="..\..\authd\PostgreSQL.h" />
     <ClInclude Include="..\..\authd\Settings.h" />
-    <ClInclude Include="..\..\authd\TCPServer.h" />
     <ClInclude Include="..\..\authd\User.h" />
+    <ClInclude Include="..\..\authd\WinSocket.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="md5.vcxproj">

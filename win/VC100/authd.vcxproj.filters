@@ -22,6 +22,9 @@
     <Filter Include="Tools">
       <UniqueIdentifier>{60ce3fb0-7862-4014-a282-baaf7d8cf1e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Protocol\Socket">
+      <UniqueIdentifier>{122fce8a-4ff4-45a7-af96-79ba0ec4d116}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\authd\Crypt.cpp">
@@ -39,9 +42,6 @@
     <ClCompile Include="..\..\authd\PacketHandler.cpp">
       <Filter>Protocol</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\authd\TCPServer.cpp">
-      <Filter>Protocol</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\authd\Log.cpp">
       <Filter>Tools</Filter>
     </ClCompile>
@@ -53,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="..\..\authd\Packets.cpp">
       <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\authd\WinSocket.cpp">
+      <Filter>Protocol\Socket</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -69,9 +72,6 @@
       <Filter>database</Filter>
     </ClInclude>
     <ClInclude Include="..\..\authd\PacketHandler.h">
-      <Filter>Protocol</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\authd\TCPServer.h">
       <Filter>Protocol</Filter>
     </ClInclude>
     <ClInclude Include="..\..\authd\Log.h">
@@ -91,6 +91,12 @@
     </ClInclude>
     <ClInclude Include="..\..\authd\Packets.h">
       <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\authd\WinSocket.h">
+      <Filter>Protocol\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\authd\ISocket.h">
+      <Filter>Protocol\Socket</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

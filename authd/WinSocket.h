@@ -22,27 +22,29 @@ author: C0dR
 
 
 
-#ifndef _PACKETHANDLER_H
-#define _PACKETHANDLER_H
+#ifndef _TCPSERVER_H
+#define _TCPSERVER_H
 
-#include "AuthHandler.h"
-#include "Packets.h"
+#include "ISocket.h"
 
-//dummy class
-class ISocket;
-
-class PacketHandler
+class WinSocket : public ISocket
 {
 public:
-	PacketHandler(ISocket *tcpServer);
-	bool HandlePacket(Client* client, char* packet);
-	void removeUser(uint32 sessionHash);
+	WinSocket(DatabaseType dbType);
+	~WinSocket();
+	bool initialize(string port);
+	void run();
+	bool SendPacket(SOCKET client, uint8* data, int length);
+	bool SendFile(SOCKET client, char* fileName);
+	void shutdown();
+	Ptr<IDatabase> getDatabase();
+	Ptr<PacketHandler> getPacketHandler();
+
 private:
-	bool handleHandshake(Client* client, char* packet);
-	bool handleAuth(Client* client, char* packet);
-	bool handleDisconnect(Client* client, char* packet);
-	ISocket *_tcpServer;
-	Ptr<AuthHandler> _authHandler;
+	SOCKET _server;
+	Ptr<IDatabase> _database;
+	Ptr<PacketHandler> _packetHandler;
 };
 
-#endif  //_PACKETHANDLER_H
+
+#endif  //_TCPSERVER_H

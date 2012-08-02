@@ -40,8 +40,14 @@ author: C0dR
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#if _WIN32
-#include <winsock2.h>
+#if _WIN32 || _WIN64
+	#include <winsock2.h>
+#else	//Linux includes; yes we support the better OS ;)
+	#include <sys/socket.h>
+	#include <sys/types.h> 
+	#include <netinet/in.h>
+	#include <unistd.h>
+	#define SOCKET int
 #endif
 #include <time.h>
 #include "functions.h"
